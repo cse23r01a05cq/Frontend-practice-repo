@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dom Exercises</title>
+    </head>
+    <body>
+        <button class="js-btn">9a</button>
+        <button class="js-second">9b</button>
+
+        <p>
+            <button onclick="
+                document.querySelector('.js-res').innerHTML='You choose:heads';
+            ">heads</button>
+            <button onclick="
+                document.querySelector('.js-res').innerHTML='You choose:tails';
+            ">tails</button>
+        </p>
+        
+        <p>
+            <input placeholder="Your name" class="js-input" onkeydown="
+                msg(event)">
+            <button onclick="
+                const input=document.querySelector('.js-input');
+                document.querySelector('.js-msg')
+                    .innerHTML=`Your name is ${input.value}`;
+
+            ">Submit</button>
+        </p>
+        <p class="js-msg"></p>
+        <script>
+            function msg(event){
+                if(event.key==='Enter'){
+                    const input=document.querySelector('.js-input');
+                    document.querySelector('.js-msg')
+                    .innerHTML=`Your name is ${input.value}`;
+                    
+                }
+            }
+            console.log(document.querySelector('.js-btn'));
+            let inner=document.querySelector('.js-btn').innerHTML;
+            inner='9b done!';
+            console.log(inner);
+
+           
+        </script>
+    </body>
+</html>

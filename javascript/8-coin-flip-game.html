@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Variables</title>
+    </head>
+    <body>
+        <button onclick="
+            playGame('heads');
+            ">Head</button>
+        <button onclick="
+            playGame('tails');
+            ">Tails</button>
+        <script>
+            function playGame(guess){
+                const randomNumber=Math.random();
+                const res=randomNumber<0.5?'heads':'tails';
+                const score=JSON.parse(localStorage.getItem('score')) ||{
+                    wins:0,
+                    losses:0
+                };
+                if(guess===res){
+                    console.log('You win!');
+                    score.wins+=1;
+                }else{
+                    console.log('You loss!');
+                    score.losses+=1
+                }
+                console.log(score);
+                localStorage.setItem('score',JSON.stringify(score));
+            }
+        </script>
+    </body>
+</html>

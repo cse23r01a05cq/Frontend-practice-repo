@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Objects</title>
+    </head>
+    <body>
+        <script>
+            const product={
+                name:'socks',
+                price:1090
+            };
+            console.log(product);
+            console.log(product.name);
+            product.name='cotton socks';
+            console.log(product);
+            product.newProperty=true;
+            console.log(product);
+            delete product.price;
+            console.log(product);
+
+            const prod2={
+
+                name:'shirt',
+                ['delivery-time']:'1 day',
+                rating:{
+                    stars:4.5,
+                    count:87
+                },
+                fun: function fun1(){
+                    console.log('function inside object');
+
+                }
+            };
+            console.log(prod2['name']);
+            console.log(prod2['delivery-time']);
+            console.log(prod2.rating.count);
+            prod2.fun();
+            console.log(typeof console);
+            console.log(typeof console.log);
+            console.log(JSON.stringify(prod2));
+            const jsonString=JSON.stringify(prod2);
+            console.log(JSON.parse(jsonString));
+
+        </script>
+    </body>
+</html>

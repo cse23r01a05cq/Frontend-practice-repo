@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Boolean Exercises</title>
+    </head>
+    <body>
+        <script>
+            //hour
+            const hour=6;
+            const name='Sathwika';
+            if(hour>=6 && hour<=12){
+                console.log(`Good morning ${name}!`);
+            }else if(hour>=13 && hour<=17){
+                console.log(`Good afternoon ${name}!`);
+            }else{
+                console.log(`Good night ${name}!`);
+            }
+            //discount for children and seniors
+            const age=5;
+            const isHoliday=false;
+            if((age<=6 || age>=65) && (isHoliday===false)){
+                console.log('Discount')
+            }else{
+                console.log(' No Discount')
+
+            }
+        </script>
+    </body>
+</html>
